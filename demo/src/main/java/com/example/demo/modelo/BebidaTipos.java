@@ -11,18 +11,19 @@ public class BebidaTipos {
     @Id
     private String id;
 
-    // Name of Tipo Bebida
+    // Nombre del tipo de bebida
     private String nombre;
 
-    // Embedded bebidas documents
+    // Lista de bebidas embebidas en el documento principal
     private List<Bebida> Bebidas;
 
     public BebidaTipos(){
-        //Empty constructor for Spring
+        //Constructor vacio para el uso de Spring
     }
 
     public BebidaTipos(String nombre, List<Bebida> bebidas) {
-        //Constructor with attributes, note that id is being mapped automatically by mongo if not especified
+        
+        //Constructor con atributos. Note que si no se define una id, mongo genera una automaticamente 
         this.nombre = nombre;
         this.Bebidas = bebidas;
     }
