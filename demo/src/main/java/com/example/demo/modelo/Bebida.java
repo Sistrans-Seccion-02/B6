@@ -1,25 +1,18 @@
 package com.example.demo.modelo;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document (collection = "bebidas")
+
 public class Bebida {
-    @Id
-    private String id;
-    @Field("nombre")
     private String nombre;
-    @Field("idTipoBebida")
     private String idTipoBebida; 
-    @Field("gradoAlcohol")
     private double gradoAlcohol;
 
-    public String getId() {
-        return id;
-    }
+    public Bebida(){}
 
-    public void setId(String id) {
-        this.id = id;
+    public Bebida(String nombre, String id, double grado){
+
+        this.nombre = nombre;
+        this.idTipoBebida = id;
+        this.gradoAlcohol = grado;
     }
 
     public String getNombre() {
