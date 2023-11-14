@@ -28,7 +28,7 @@ public class BebidaTiposController {
 
     @GetMapping("/btForm")
     public String mostrarFormulario(Model model) {
-        // Crea una instancia vacía para el nuevo BebidaTipos
+        // Creamos una instancia vacía para el nuevo BebidaTipos
         model.addAttribute("nuevoBebidaTipo", new BebidaTipos());
         return "bebidaTiposForm";
     }
@@ -36,17 +36,17 @@ public class BebidaTiposController {
     @PostMapping("/crearBebidaTipo")
     public String crearBebidaTipos(@ModelAttribute("nuevoBebidaTipo") BebidaTipos nuevoBebidaTipo) {
 
-        // Crea una nueva bebida utilizando los datos del formulario
+        // Creamos una nueva bebida utilizando los datos del formulario
         Bebida nuevaBebida = new Bebida(
             nuevoBebidaTipo.getBebidas().get(0).getNombre(),
             nuevoBebidaTipo.getBebidas().get(0).getIdTipoBebida(),
             nuevoBebidaTipo.getBebidas().get(0).getGradoAlcohol()
         );
 
-        // Agrega la bebida a la lista de bebidas en el nuevo tipo de bebida
+        // Agregamos la bebida a la lista de bebidas en el nuevo tipo de bebida
         nuevoBebidaTipo.setBebidas(Collections.singletonList(nuevaBebida));
 
-        // Guarda el nuevo tipo de bebida
+        // Guardamos el nuevo tipo de bebida
         btRepository.save(nuevoBebidaTipo);
         return "redirect:/bt";
     }
