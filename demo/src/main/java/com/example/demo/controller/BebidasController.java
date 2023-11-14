@@ -50,7 +50,7 @@ public class BebidasController {
     public ResponseEntity<Bebida> actualizarBebida(@PathVariable String id, @RequestBody Bebida bebida) {
         Optional<Bebida> bebidaExistente = bebidaRepository.findById(id);
         if (bebidaExistente.isPresent()) {
-            bebida.setId(id); // Asegura que el ID sea el mismo que el proporcionado en la URL
+            //bebida.setId(id); // Asegura que el ID sea el mismo que el proporcionado en la URL
             Bebida bebidaActualizada = bebidaRepository.save(bebida);
             return new ResponseEntity<>(bebidaActualizada, HttpStatus.OK);
         } else {
