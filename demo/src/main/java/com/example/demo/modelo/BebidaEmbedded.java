@@ -2,28 +2,19 @@ package com.example.demo.modelo;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "bebidas")
-public class Bebida {
+@Document (collection = "bebidas_embedded")
+public class BebidaEmbedded {
     @Id
     private String id;
-
-    @Field("nombre")
     private String nombre;
-
-    @Field("idTipoBebida")
-    private String idTipoBebida; 
-
-    @Field("gradoAlcohol")
     private double gradoAlcohol;
 
-    public Bebida(){}
+    public BebidaEmbedded(){}
 
-    public Bebida(String nombre, String id, double grado){
+    public BebidaEmbedded(String nombre, double grado){
 
         this.nombre = nombre;
-        this.idTipoBebida = id;
         this.gradoAlcohol = grado;
     }
 
@@ -33,14 +24,6 @@ public class Bebida {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getIdTipoBebida() {
-        return idTipoBebida;
-    }
-
-    public void setIdTipoBebida(String idTipoBebida) {
-        this.idTipoBebida = idTipoBebida;
     }
 
     public double getGradoAlcohol() {
