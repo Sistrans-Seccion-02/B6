@@ -17,6 +17,8 @@
             position: sticky;
             top: 0;
             z-index: 100; /* Asegura que el navbar esté por encima del contenido */
+            width:auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         }
 
         nav a {
@@ -26,6 +28,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         nav a:hover {
@@ -33,7 +36,7 @@
             color: black;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 800px) {
             nav a {
                 float: none;
                 display: block;
@@ -43,7 +46,6 @@
             }
         }
 
-        /* Agrega estilos adicionales según sea necesario */
         .contenido {
             padding: 16px;
         }
@@ -55,6 +57,7 @@
             text-align: center;
             margin-top: 30px;
             height: 160px;
+            box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
         }
 
         .footer-image {
@@ -75,10 +78,9 @@
     </style>
 </head>
 <body>
-    <div class="row">
         <nav>
             <a th:href="@{/}" style="margin-left: 10px;">Parranderos</a>
-            <div style="margin-left: 950px;">
+            <div style="margin-left: 800px;">
                 <a th:href="@{/bebidas}">Bebidas</a>
                 <a th:href="@{/tipobebidas}">Tipo Bebidas</a>
                 <a th:href="@{/bt}">Bebidas Tipos</a>
@@ -86,7 +88,7 @@
             </div>
             
         </nav>
-    </div>
+
 
     <div class="row" style="margin-top: 40px;">
         <label class="col-md-6 control-label">
@@ -94,18 +96,15 @@
         </label>
 
         <label class="col-md-6 control-label">
-            <h1 style="font-size: 120px; text-align: left;"> Parranderos + MongoDB </h1>
-            <h1 style="font-size: 20px; text-align: left; letter-spacing: 5px; word-spacing: 22px;">Una aplicación demo que usa Spring Boot Data con MongoDB para el modulo NoSQL del curso Sistemas Transaccionales.</h1>
-            <div class="buttons">
-                <button class="btn-hover color-1">Comenzar</button>
-            </div>
+            <h1 style="font-size: 120px; text-align:start;"> Parranderos + MongoDB </h1>
+            <h1 style="font-size: 20px; text-align: start; letter-spacing: 5px; word-spacing: 22px;">Una aplicación demo que usa Spring Boot Data con MongoDB como ejemplo practico para el modulo NoSQL del curso Sistemas Transaccionales.</h1>
         </label>
         
     </div>
 
     <footer>
         <img src="https://github.com/JuanCoronel70/el-salvador-violencia/blob/main/79f258dcebe9f4539ec8a18928973e86-removebg-preview.png?raw=true" alt="Logo" class="footer-image">
-        <p>Texto del Footer. Puedes añadir más contenido aquí.</p>
+        <p style="text-align: right; margin-top: 100px;">@Universidad de los Andes - DISC - Sistemas Transaccionales (2023-02)</p>
     </footer>
 
 <script src="/webjars/bootstrap/4.5.3/js/bootstrap.min.js"></script>
