@@ -29,6 +29,8 @@
                             <span th:text="${Bebidas.nombre + ', ' + Bebidas.gradoAlcohol}"></span>
                         </li>
                     </ul>
+                    <!-- Botón para redirigir al formulario de adición de la bebida -->
+                    <a th:href="@{'/addBebida?nombre=' + ${bebidaTipo.nombre}}" class="btn btn-primary">Añadir Bebida</a>
                 </td>
             </tr>
         </tbody>
