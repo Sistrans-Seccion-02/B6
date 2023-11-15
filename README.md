@@ -1,6 +1,6 @@
 # Parranderos con MongoDB (Demo)
 
-Este proyecto, propuesto por el docente Wilfredy Santamaria, busca representar de manera muy simple una aplicacion RESTful que permita hacer transacciones tipo CRUD en una base de datos no relacional. La base de datos es creada con MongoDB Atlas, la cual maneja clusters que proveen el servicio a los usuarios, en este caso, los estudiantes. Dado que la materia de ingenieria de sistemas, Sistemas Transaccionales, ahora incluye un nuevo modulo el cual versa sobre las bases de datos no-relacionales (No SQL), se considera que construir una aplicacion guia es muy provechoso para el aprendizaje y puesta en practica de conocimientos para los estudiantes.
+Este proyecto busca representar de manera muy simple una aplicacion RESTful que permita hacer transacciones tipo CRUD. La base de datos es creada con MongoDB Atlas, la cual maneja clusters que proveen el servicio a los usuarios, en este caso, los estudiantes.
 
 ## Contenido
 
@@ -20,10 +20,10 @@ Este proyecto, propuesto por el docente Wilfredy Santamaria, busca representar d
 
 ## Conexion del proyecto a la base de datos
 
-En el archivo del proyecto ubicado en src/main/resources/application.yml, donde dice "uri" ingresar el enlace de conexion a la base de datos de mongo creada por el estudiante en Atlas.
+En el archivo del proyecto ubicado en src/main/resources/application.yml, donde dice "uri" ingresar el enlace de conexion a la base de datos de mongo creada por el estudiante en Atlas. El uri de conexion debe lucir como el siguiente ejemplo: mongodb+srv://admin:mongo@cluster0.ejemplo.mongodb.net/
 
 ## Tecnologias usadas
-
+                     
 Este proyecto fue desarrollado haciendo uso de Spring, particularmente Spring Boot para el backend, con entorno de ejecucion node.js y thymeleaf para la conexion de un frontend local con los endpoints definidos. Se recomienda hacer lectura de la documentacion de dichas tecnologias.
 
 ## Colaboración
