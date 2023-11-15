@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.example.demo.modelo.BebidaEmbedded;
 import com.example.demo.modelo.BebidaTipos;
 import com.example.demo.repositorio.BebidaEmbeddedRepository;
@@ -59,6 +61,15 @@ public class BebidaTiposController {
         // Guardamos el nuevo tipo de bebida
         btRepository.save(nuevoBebidaTipo);
         return "redirect:/bt";
+    }
+
+    @GetMapping("/addBebida")
+    public String añadirBebida(@RequestParam(name = "nombre", required = false) String nombre, Model model){
+        model.addAttribute("nombreTipoBebida", nombre);
+        model.addAttribute("bebida", new BebidaEmbedded());
+
+
+        return "addBebidaForm";
     }
 
     
