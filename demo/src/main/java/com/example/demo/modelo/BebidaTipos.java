@@ -15,13 +15,13 @@ public class BebidaTipos {
     private String nombre;
 
     // Lista de bebidas embebidas en el documento principal
-    private List<Bebida> Bebidas;
+    private List<BebidaEmbedded> Bebidas;
 
     public BebidaTipos(){
         //Constructor vacio para el uso de Spring
     }
 
-    public BebidaTipos(String nombre, List<Bebida> bebidas) {
+    public BebidaTipos(String nombre, List<BebidaEmbedded> bebidas) {
         
         //Constructor con atributos. Note que si no se define una id, mongo genera una automaticamente 
         this.nombre = nombre;
@@ -37,11 +37,11 @@ public class BebidaTipos {
         this.nombre = name;
     }   
 
-    public List<Bebida> getBebidas(){
+    public List<BebidaEmbedded> getBebidas(){
         return Bebidas;
     }
 
-    public void setBebidas(List<Bebida> bebidas){
+    public void setBebidas(List<BebidaEmbedded> bebidas){
         this.Bebidas = bebidas;
     }
 
