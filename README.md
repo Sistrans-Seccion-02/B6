@@ -26,4 +26,9 @@ En el archivo del proyecto ubicado en src/main/resources/application.yml, donde 
 
 Este proyecto fue desarrollado haciendo uso de Spring, particularmente Spring Boot para el backend, con entorno de ejecucion node.js y thymeleaf para la conexion de un frontend local con los endpoints definidos. Se recomienda hacer lectura de la documentacion de dichas tecnologias.
 
+## Colaboración
+Proyecto desarrollado por los monitores del curso Sistemas Transaccionales, especificamente, de las secciones 2 y 3. (2023-02)
+- Version inicial: [Nathalia Quiroga, Laura Martinez]
+- Version Final: [Juan Coronel, Daniel Aguilera]
+- Revisión: ...
 
