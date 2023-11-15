@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Bebida</title>
+</head>
+<body>
+
+<div class="container mt-3">
+    <h1>Nueva Bebida</h1>
+
+    <!-- Formulario de creación -->
+    <form th:action="@{/crearBebidaEmTipo}" th:object="${nuevoBebidaEm}" method="post">
+        <label for="nombre">Nombre de la bebida:</label>
+        <input type="text" id="nombre" name="nombre" th:field="*{nombre}" required />
+
+        <label for="gradoAlcohol">Grado de Alcohol:</label>
+        <input type="text" id="gradoAlcohol" name="gradoAlcohol" th:field="*{gradoAlcohol}" required />
+
+
+        <button type="submit" class="btn btn-success">Crear Tipo de Bebida</button>
+    </form>
+
+</div>
+
+</body>
+</html>
