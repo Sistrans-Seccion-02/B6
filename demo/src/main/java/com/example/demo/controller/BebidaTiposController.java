@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.ArrayList;
 import java.util.Collections;
-
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -70,6 +71,39 @@ public class BebidaTiposController {
 
 
         return "addBebidaForm";
+    }
+
+    @PostMapping("/addBebidaSave")
+    public String añadirBebidaSave(@RequestParam("nombreTipoBebida") String nombreTipoBebida,
+    @ModelAttribute("bebida") BebidaEmbedded beb){
+
+        // Creamos una nueva bebida utilizando los datos del formulario
+        BebidaEmbedded nuevaBebida = new BebidaEmbedded(
+            beb.getNombre(),
+            beb.getGradoAlcohol()
+        );
+
+        // Guardamos la bebida embebida
+        beRepository.save(nuevaBebida);
+
+        System.out.println(nombreTipoBebida);
+        //Buscamos los tipos de bebida con ese nombre
+        List<BebidaTipos> bebs = btRepository.findByNombre(nombreTipoBebida);
+
+        //Añadimos esa bebida a todos los tipos de bebidas con ese nombre
+        for (BebidaTipos tipoBebida:bebs){
+            if (tipoBebida.getBebidas() == null){
+                List<BebidaEmbedded> emptyList = new ArrayList<>();
+                tipoBebida.setBebidas(emptyList);
+            }
+            tipoBebida.addBebida(nuevaBebida);
+
+            //Persistemos la modificacion en la base de datos
+            btRepository.save(tipoBebida);
+        }
+        
+        return "redirect:/bt";
+
     }
 
     

@@ -45,6 +45,10 @@ public class BebidaTipos {
         this.Bebidas = bebidas;
     }
 
+    public void addBebida(BebidaEmbedded bebida){
+        this.Bebidas.add(bebida);
+    }
+
 
 
 
