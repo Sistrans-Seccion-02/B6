@@ -28,7 +28,7 @@ En el archivo del proyecto ubicado en src/main/resources/application.yml, donde 
 Cuando se crea una base de datos en Atlas MongoDB por lo general se pide una coleccion base para comenzar, por ello, a continuacion adjuntamos las colecciones usadas en este proyecto para usar alguna de estas como coleccion base (puede seleccionar cualquiera). La base de datos MongoDB usada para este proyecto, tiene estas colecciones creadas:
 
 - bebidas:
-
+```json
 {
   "_id": {
     "$oid": "6555905537bd8a4de1a8ca08"
@@ -37,9 +37,10 @@ Cuando se crea una base de datos en Atlas MongoDB por lo general se pide una col
   "gradoAlcohol": 12,
   "_class": "com.example.demo.modelo.Bebida"
 }
+```
 
 - bebidas_tipos:
-
+```json
 {
   "_id": {
     "$oid": "6553edd71af8a72f0d64d54c"
@@ -53,9 +54,10 @@ Cuando se crea una base de datos en Atlas MongoDB por lo general se pide una col
   ],
   "_class": "com.example.demo.modelo.BebidaTipos"
 }
+```
 
 - tipo_bebidas:
-
+```json
 {
   "_id": {
     "$oid": "655590ebc466e02e51a4f2e0"
@@ -71,6 +73,7 @@ Cuando se crea una base de datos en Atlas MongoDB por lo general se pide una col
   ],
   "_class": "com.example.demo.modelo.TipoBebida"
 }
+```
 
 
 ## Tecnologias usadas
