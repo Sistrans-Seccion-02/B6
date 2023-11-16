@@ -1,12 +1,8 @@
 package com.example.demo.modelo;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document (collection = "bebidas_embedded")
 public class BebidaEmbedded {
-    @Id
-    private String id;
+
     private String nombre;
     private double gradoAlcohol;
 

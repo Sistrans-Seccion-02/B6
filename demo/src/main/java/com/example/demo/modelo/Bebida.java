@@ -12,18 +12,14 @@ public class Bebida {
     @Field("nombre")
     private String nombre;
 
-    @Field("idTipoBebida")
-    private String idTipoBebida; 
-
     @Field("gradoAlcohol")
     private double gradoAlcohol;
 
     public Bebida(){}
 
-    public Bebida(String nombre, String id, double grado){
+    public Bebida(String nombre, double grado){
 
         this.nombre = nombre;
-        this.idTipoBebida = id;
         this.gradoAlcohol = grado;
     }
 
@@ -35,19 +31,15 @@ public class Bebida {
         this.nombre = nombre;
     }
 
-    public String getIdTipoBebida() {
-        return idTipoBebida;
-    }
-
-    public void setIdTipoBebida(String idTipoBebida) {
-        this.idTipoBebida = idTipoBebida;
-    }
-
     public double getGradoAlcohol() {
         return gradoAlcohol;
     }
 
     public void setGradoAlcohol(double gradoAlcohol) {
         this.gradoAlcohol = gradoAlcohol;
+    }
+
+    public String getId(){
+        return id;
     }
 }

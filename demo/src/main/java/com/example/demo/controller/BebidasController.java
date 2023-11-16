@@ -1,41 +1,65 @@
 package com.example.demo.controller;
-import java.util.List;
 import java.util.Optional;
 
+import javax.swing.text.html.Option;
+
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.modelo.Bebida;
+import com.example.demo.modelo.BebidaTipos;
 import com.example.demo.repositorio.BebidaRepository;
 
-@RestController
-@RequestMapping("/bebidas")
+
+
+@Controller
 public class BebidasController {
 
     @Autowired
     private BebidaRepository bebidaRepository;
 
-    @PostMapping
-    public ResponseEntity<Bebida> crearBebida(@RequestBody Bebida bebida) {
-        Bebida nuevaBebida = bebidaRepository.save(bebida);
-        return new ResponseEntity<>(nuevaBebida, HttpStatus.CREATED);
+    @GetMapping("/crearBebida")
+    public String crearBebida(Model model) {
+        model.addAttribute("bebidaNueva", new Bebida());
+        return "bebidaForm";
     }
 
-    @GetMapping
-    public ResponseEntity<List<Bebida>> obtenerTodasLasBebidas() {
-        List<Bebida> bebidas = bebidaRepository.findAll();
-        return new ResponseEntity<>(bebidas, HttpStatus.OK);
-    } 
+    @PostMapping("/crearBebidaNueva")
+    public String crearBebidaNueva(@ModelAttribute("bebidaNueva") Bebida bebida) {
+        Bebida nueva = new Bebida(
+            bebida.getNombre(), bebida.getGradoAlcohol()
+        );
+        bebidaRepository.save(nueva);
+        return "redirect:/bebidas";
+    }
 
+    @PostMapping("/deleteBebida")
+    public String eliminarBebidaTipo(@RequestParam(name = "id", required = false) String id){
+        
+        bebidaRepository.deleteById(id);
+
+        return "redirect:/bebidas";
+        
+    }
+
+    @GetMapping("/bebidas")
+    public String obtenerTodasLasBebidas(Model model) {
+        model.addAttribute("bebidas", bebidaRepository.findAll());
+        return "bebidas";
+    } 
+    /** 
     @GetMapping("/{id}")
     public ResponseEntity<Bebida> obtenerBebidaPorId(@PathVariable String id) {
         Optional<Bebida> bebida = bebidaRepository.findById(id);
@@ -68,6 +92,7 @@ public class BebidasController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    */
 
 }
 

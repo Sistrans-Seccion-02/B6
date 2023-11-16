@@ -29,15 +29,22 @@
                             <span th:text="${Bebidas.nombre + ', ' + Bebidas.gradoAlcohol}"></span>
                         </li>
                     </ul>
+
                     <!-- Botón para redirigir al formulario de adición de la bebida -->
                     <a th:href="@{'/addBebida?nombre=' + ${bebidaTipo.nombre}}" class="btn btn-primary">Añadir Bebida</a>
+
+                    <!-- Botón para redirigir al formulario de la eliminacion del tipo de bebida -->
+                    <form th:action="@{/deleteBebidaTipo}" method="post">
+                        <input type="hidden" name="nombre" th:value="${bebidaTipo.nombre}" />
+                        <button type="submit" class="btn btn-primary" style="background-color: red; border-color: red; margin-top: 10px;">Eliminar Tipo de Bebida</button>
+                    </form>
                 </td>
             </tr>
         </tbody>
     </table>
 
-     <!-- Botón para redirigir al formulario de creación -->
-     <a th:href="@{/btForm}" class="btn btn-primary">Crear Nuevo Tipo de Bebida</a>
+     <!-- Botón para redirigir al formulario de creación de tipo bebida -->
+     <a th:href="@{/btForm}" class="btn btn-primary" style="margin-bottom: 38px;">Crear Nuevo Tipo de Bebida</a>
 
 </div>
 
