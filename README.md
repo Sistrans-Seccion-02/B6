@@ -83,6 +83,6 @@ Este proyecto fue desarrollado haciendo uso de Spring, particularmente Spring Bo
 ## Colaboración
 Proyecto desarrollado por los monitores del curso Sistemas Transaccionales, especificamente, de las secciones 2 y 3. (2023-02)
 - Version inicial (inicializacion de Spring, entidades iniciales y creacion de la base de datos MongoDB en Atlas): [Nathalia Quiroga, Laura Martinez]
-- MPV Demo v0.1 (Front-end, Back-end, CRUD, implementacion patron MVC, modelos, controladores, templates, conexion): [Juan Coronel @JuanCoronel70] 
+- MPV Demo v0.1 (Front-end, Back-end, CRUD, implementacion patron MVC, modelos, controladores, templates, conexion, documentacion): [Juan Coronel @JuanCoronel70] 
 - Revisión: ...
 
