@@ -15,7 +15,11 @@
     </div>
 
     <!-- Formulario de creación -->
-    <form th:action="@{/crearBebidaEmTipo}" th:object="${bebida}" method="post" style="margin-top: 35px;">
+    <form th:action="@{/addBebidaSave}" th:object="${bebida}" method="post" style="margin-top: 35px;">
+
+        <!-- Campo oculto para la variable nombreTipoBebida -->
+        <input type="hidden" id="nombreTipoBebida" name="nombreTipoBebida" th:value="${nombreTipoBebida}" />
+        
         <label for="nombre">Nombre de la bebida:</label>
         <input type="text" id="nombre" name="nombre" th:field="*{nombre}" required />
 
@@ -23,7 +27,7 @@
         <input type="text" id="gradoAlcohol" name="gradoAlcohol" th:field="*{gradoAlcohol}" required />
 
 
-        <button type="submit" class="btn btn-success">Crear Tipo de Bebida</button>
+        <button type="submit" class="btn btn-success">Añadir Bebida</button>
     </form>
 
 </div>
