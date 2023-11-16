@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.modelo.BebidaEmbedded;
 import com.example.demo.modelo.BebidaTipos;
-import com.example.demo.repositorio.BebidaEmbeddedRepository;
 import com.example.demo.repositorio.BebidaTiposRepository;
 
 @Controller
@@ -23,8 +22,6 @@ public class BebidaTiposController {
     @Autowired
     private BebidaTiposRepository btRepository;
 
-    @Autowired
-    private BebidaEmbeddedRepository beRepository;
 
     @GetMapping("/bt")
     public String obtenerTodasLasBebidasTipos(Model model){
@@ -55,9 +52,7 @@ public class BebidaTiposController {
 
         // Agregamos la bebida a la lista de bebidas en el nuevo tipo de bebida
         nuevoBebidaTipo.setBebidas(Collections.singletonList(nuevaBebida));
-        
-        // Guardamos la bebida embebida
-        beRepository.save(nuevaBebida);
+
 
         // Guardamos el nuevo tipo de bebida
         btRepository.save(nuevoBebidaTipo);
@@ -73,6 +68,18 @@ public class BebidaTiposController {
         return "addBebidaForm";
     }
 
+    @PostMapping("/deleteBebidaTipo")
+    public String eliminarBebidaTipo(@RequestParam(name = "nombre", required = false) String nombre){
+        
+        for (BebidaTipos beb: btRepository.findByNombre(nombre))
+        {
+            btRepository.delete(beb);
+        }
+
+        return "redirect:/bt";
+        
+    }
+
     @PostMapping("/addBebidaSave")
     public String añadirBebidaSave(@RequestParam("nombreTipoBebida") String nombreTipoBebida,
     @ModelAttribute("bebida") BebidaEmbedded beb){
@@ -82,9 +89,6 @@ public class BebidaTiposController {
             beb.getNombre(),
             beb.getGradoAlcohol()
         );
-
-        // Guardamos la bebida embebida
-        beRepository.save(nuevaBebida);
 
         System.out.println(nombreTipoBebida);
         //Buscamos los tipos de bebida con ese nombre

@@ -1,30 +1,65 @@
 package com.example.demo.controller;
-
-import java.util.List;
-import java.util.Optional;
+import java.util.Collections;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.modelo.Bebida;
+import com.example.demo.modelo.BebidaEmbedded;
 import com.example.demo.modelo.TipoBebida;
+import com.example.demo.repositorio.BebidaRepository;
 import com.example.demo.repositorio.TipoBebidaRepository;
 
-@RestController
-@RequestMapping("/tipobebidas")
+@Controller
 public class TipoBebidaController {
 
     @Autowired
     private TipoBebidaRepository tipoBebidaRepository;
 
+    @Autowired
+    private BebidaRepository bebidasRepo;
+
+    @GetMapping("/tipoBebidas")
+    public String getTipoBebidas(Model model){
+
+        model.addAttribute("tipos", tipoBebidaRepository.findAll());
+        return "tiposBebidas";
+
+    }
+
+    @GetMapping("/tbForm")
+    public String mostrarFormulario(Model model) {
+        // Creamos una instancia vacía para el nuevo BebidaTipos
+        model.addAttribute("nuevoTipoBebida", new TipoBebida());
+        model.addAttribute("bebidasDisponibles", bebidasRepo.findAll());
+        return "tiposBebidasForm";
+    }
+
+    @PostMapping("/crearTipoBebida")
+    public String crearBebidaTipos(@ModelAttribute("nuevoTipoBebida") TipoBebida nuevoBebidaTipo) {
+
+        // Creamos una nueva bebida utilizando los datos del formulario
+        Bebida nuevaBebida = new Bebida(
+            nuevoBebidaTipo.getBebidas().get(0).getNombre(),
+            nuevoBebidaTipo.getBebidas().get(0).getGradoAlcohol()
+        );
+
+        bebidasRepo.save(nuevaBebida);
+
+        // Agregamos la bebida a la lista de bebidas en el nuevo tipo de bebida
+        nuevoBebidaTipo.setBebidas(Collections.singletonList(nuevaBebida));
+
+
+        // Guardamos el nuevo tipo de bebida
+        tipoBebidaRepository.save(nuevoBebidaTipo);
+        return "redirect:/tipoBebidas";
+    }
+    
+    /**
     @PostMapping
     public ResponseEntity<TipoBebida> crearTipoBebida(@RequestBody TipoBebida tipoBebida) {
         TipoBebida nuevoTipoBebida = tipoBebidaRepository.save(tipoBebida);
@@ -69,4 +104,5 @@ public class TipoBebidaController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    */
 }
