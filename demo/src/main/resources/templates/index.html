@@ -78,16 +78,8 @@
     </style>
 </head>
 <body>
-        <nav>
-            <a th:href="@{/}" style="margin-left: 10px;">Parranderos</a>
-            <div style="margin-left: 1000px;">
-                <a th:href="@{/bebidas}">Bebidas</a>
-                <a th:href="@{/tipoBebidas}">Tipo Bebidas</a>
-                <a th:href="@{/bt}">Bebidas Tipos</a>
-            </div>
-            
-        </nav>
-
+        <!-- Incluye el navbar -->
+    <div th:replace="navbar :: navbar"></div>
 
     <div class="row" style="margin-top: 40px;">
         <label class="col-md-6 control-label">
