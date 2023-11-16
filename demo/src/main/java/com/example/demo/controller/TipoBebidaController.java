@@ -1,7 +1,11 @@
 package com.example.demo.controller;
 import java.util.Collections;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.LookupOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +27,9 @@ public class TipoBebidaController {
     @Autowired
     private BebidaRepository bebidasRepo;
 
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
     @GetMapping("/tipoBebidas")
     public String getTipoBebidas(Model model){
 
@@ -30,6 +37,23 @@ public class TipoBebidaController {
         return "tiposBebidas";
 
     }
+
+    @GetMapping("/mostrarResultadosAgregacion")
+    public String mostrarResultados(Model model) {
+        LookupOperation lookupOperation = LookupOperation.newLookup()
+                .from("bebidas")
+                .localField("bebidas")
+                .foreignField("_id")
+                .as("Lista_bebidas_tipo");
+
+        Aggregation aggregation = Aggregation.newAggregation(lookupOperation);
+
+        List<TipoBebida> tiposBebida = mongoTemplate.aggregate(aggregation, "tipo_bebidas", TipoBebida.class).getMappedResults();
+        model.addAttribute("tiposBebida", tiposBebida);
+
+        return "resultados";
+    }
+    
 
     @GetMapping("/tbForm")
     public String mostrarFormulario(Model model) {
