@@ -33,5 +33,12 @@ public class ReservaController {
         return "habitaciones";
     }
 
+    @GetMapping("/servicios")
+    public String obtenerTodosLosServicios(Model model) {
+        model.addAttribute("servicios", reservasRepository.getConsumosServicios());
+        return "servicios";
+    }
+
+
 
 }
