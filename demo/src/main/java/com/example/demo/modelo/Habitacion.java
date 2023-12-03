@@ -4,32 +4,22 @@ import java.util.List;
 
 public class Habitacion {
 
-	private String hotel;
+	
     private int numero;
-	private int diasocupada;
-    private TipoHabitacion tipo;
-    private List<Cliente> clientes;
+	private List<String> dotacion;
+    private List<TipoHabitacion> tipo;
+    
 
-    public Habitacion(String hotel, int numero, int diasocupada, TipoHabitacion tipo, List<Cliente> clientes) {
+    public Habitacion(int numero, List<String> dotacion, List<TipoHabitacion> tipo) {
         super();
-		this.hotel = hotel;
         this.numero = numero;
-		this.diasocupada = diasocupada;
+		this.dotacion = dotacion;
         this.tipo = tipo;
-        this.clientes = clientes;
     }
 
     public Habitacion() {
         super();
     }
-
-	public String getHotel() {
-		return hotel;
-	}
-
-	public void setHotel(String hotel) {
-		this.hotel = hotel;
-	}
 
 	public int getNumero() {
 		return numero;
@@ -39,29 +29,22 @@ public class Habitacion {
 		this.numero = numero;
 	}
 
-	public int getDiasocupada() {
-		return diasocupada;
+	public List<String> getDotacion() {
+		return dotacion;
 	}
 
-	public void setDiasocupada(int diasocupada) {
-		this.diasocupada = diasocupada;
+	public void setDotacion(List<String> dotacion) {
+		this.dotacion = dotacion;
 	}
 
-	public TipoHabitacion getTipo() {
+	public List<TipoHabitacion> getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(TipoHabitacion tipo) {
+	public void setTipo(List<TipoHabitacion> tipo) {
 		this.tipo = tipo;
 	}
 
-	public List<Cliente> getClientes() {
-		return clientes;
-	}
-
-	public void setClientes(List<Cliente> clientes) {
-		this.clientes = clientes;
-	}
-
+	
 	
 }

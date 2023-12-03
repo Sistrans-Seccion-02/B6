@@ -1,21 +1,19 @@
 package com.example.demo.modelo;
 
-import java.util.List;
 
 public class Cliente {
 
     private int id;
+	private String tipoid;
     private String nombre;
-    private String entrada;
-    private String salida;
-    private List<Consumo> consumos;
+    private String email;
+    
 
-    public Cliente(String nombre, String entrada, String salida, List<Consumo> consumos) {
+    public Cliente(String nombre, String tipoid, String email) {
         super();
         this.nombre = nombre;
-        this.entrada = entrada;
-        this.salida = salida;
-        this.consumos = consumos;
+        this.tipoid = tipoid;
+        this.email = email;
     }
 
     public Cliente() {
@@ -38,27 +36,21 @@ public class Cliente {
 		this.nombre = nombre;
 	}
 
-	public String getEntrada() {
-		return entrada;
+	public String getTipoid() {
+		return tipoid;
 	}
 
-	public void setEntrada(String entrada) {
-		this.entrada = entrada;
+	public void setTipoid(String tipoid) {
+		this.tipoid = tipoid;
 	}
 
-	public String getSalida() {
-		return salida;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setSalida(String salida) {
-		this.salida = salida;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public List<Consumo> getConsumos() {
-		return consumos;
-	}
-
-	public void setConsumos(List<Consumo> consumos) {
-		this.consumos = consumos;
-	}
+	
 }

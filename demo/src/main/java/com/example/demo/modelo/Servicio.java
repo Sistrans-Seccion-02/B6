@@ -4,13 +4,14 @@ package com.example.demo.modelo;
 public class Servicio {
 
     private String nombre;
-    private String fecha;
-    private int precio;
+    private String descripcion;
+    private int costo;
 
-    public Servicio(String fecha, int precio){
+    public Servicio(String nombre, String descripcion, int costo){
         super();
-        this.fecha = fecha;
-        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.costo = costo;
     }
 
     public Servicio() {
@@ -25,22 +26,23 @@ public class Servicio {
         this.nombre = nombre;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public int getPrecio() {
-        return precio;
+    public int getCosto() {
+        return costo;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    public void setCosto(int costo) {
+        this.costo = costo;
     }
 
+   
     
     
 

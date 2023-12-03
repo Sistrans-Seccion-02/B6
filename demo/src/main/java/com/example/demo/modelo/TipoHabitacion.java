@@ -5,14 +5,14 @@ import java.util.List;
 public class TipoHabitacion {
 
     private String nombre;
-    private int precio;
-    private List<String> dotacion;
+    private int costo;
+    private int capacidad;
 
-    public TipoHabitacion(String nombre, int precio, List<String> dotacion) {
+    public TipoHabitacion(String nombre, int costo, int capacidad) {
         super();
         this.nombre = nombre;
-        this.precio = precio;
-        this.dotacion = dotacion;
+        this.costo = costo;
+        this.capacidad = capacidad;
     }
 
     public TipoHabitacion() {
@@ -27,21 +27,22 @@ public class TipoHabitacion {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
-        return precio;
+    public int getCosto() {
+        return costo;
     }
 
-    public void setPrecio(int precio) {
-        this.precio= precio;
+    public void setCosto(int costo) {
+        this.costo = costo;
     }
 
-    public List<String> getDotacion() {
-        return dotacion;
+    public int getCapacidad() {
+        return capacidad;
     }
 
-    public void setDotacion(List<String> dotacion) {
-        this.dotacion = dotacion;
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 
+    
     
 }

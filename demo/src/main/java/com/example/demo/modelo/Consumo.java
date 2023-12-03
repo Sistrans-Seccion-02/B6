@@ -1,18 +1,18 @@
 package com.example.demo.modelo;
 
+import java.util.Date;
+import java.util.List;
 
 public class Consumo {
 
-    private String fecha;
-    private String nombre;
-    private int precio;
-    private Servicio servicio;
+    private Date fecha;
+    private String pagado;
+    private List<Servicio> servicio;
 
-    public Consumo(String fecha, String nombre, int precio, Servicio servicio) {
+    public Consumo(Date fecha, String pagado, List<Servicio> servicio) {
 		super();
         this.fecha = fecha;
-		this.nombre = nombre;
-		this.precio = precio;
+		this.pagado = pagado;
 		this.servicio = servicio;
 	}
 
@@ -20,35 +20,29 @@ public class Consumo {
         super();
     }
 
-	public String getFecha() {
+	public Date getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(String fecha) {
+	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getPagado() {
+		return pagado;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setPagado(String pagado) {
+		this.pagado = pagado;
 	}
 
-	public int getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(int precio) {
-		this.precio = precio;
-	}
-
-	public Servicio getServicio() {
+	public List<Servicio> getServicio() {
 		return servicio;
 	}
 
-	public void setServicio(Servicio servicio) {
+	public void setServicio(List<Servicio> servicio) {
 		this.servicio = servicio;
 	}
+
+	
 }
