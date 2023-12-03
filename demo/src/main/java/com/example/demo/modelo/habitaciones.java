@@ -2,22 +2,26 @@ package com.example.demo.modelo;
 
 import java.util.List;
 
-public class Habitacion {
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 
-	
+public class habitaciones {
+
+	@Id
+	private ObjectId id;
     private int numero;
 	private List<String> dotacion;
-    private List<TipoHabitacion> tipo;
+    private tipohabi tipo;
     
 
-    public Habitacion(int numero, List<String> dotacion, List<TipoHabitacion> tipo) {
+    public habitaciones(int numero, List<String> dotacion, tipohabi tipo) {
         super();
         this.numero = numero;
 		this.dotacion = dotacion;
         this.tipo = tipo;
     }
 
-    public Habitacion() {
+    public habitaciones() {
         super();
     }
 
@@ -37,11 +41,11 @@ public class Habitacion {
 		this.dotacion = dotacion;
 	}
 
-	public List<TipoHabitacion> getTipo() {
+	public tipohabi getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(List<TipoHabitacion> tipo) {
+	public void setTipo(tipohabi tipo) {
 		this.tipo = tipo;
 	}
 

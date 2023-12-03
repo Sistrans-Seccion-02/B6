@@ -1,31 +1,31 @@
 package com.example.demo.modelo;
 
 
-public class Cliente {
+public class clientes {
 
-    private int id;
+    private int _id;
 	private String tipoid;
     private String nombre;
     private String email;
     
 
-    public Cliente(String nombre, String tipoid, String email) {
+    public clientes(String nombre, String tipoid, String email) {
         super();
         this.nombre = nombre;
         this.tipoid = tipoid;
         this.email = email;
     }
 
-    public Cliente() {
+    public clientes() {
         super();
     }
 
-	public int getId() {
-		return id;
+	public int get_Id() {
+		return _id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void set_Id(int _id) {
+		this._id = _id;
 	}
 
 	public String getNombre() {

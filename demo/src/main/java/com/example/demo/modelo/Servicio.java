@@ -1,20 +1,24 @@
 package com.example.demo.modelo;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 
-public class Servicio {
+public class servicio {
+    @Id
+	private ObjectId id;
 
     private String nombre;
     private String descripcion;
     private int costo;
 
-    public Servicio(String nombre, String descripcion, int costo){
+    public servicio(String nombre, String descripcion, int costo){
         super();
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.costo = costo;
     }
 
-    public Servicio() {
+    public servicio() {
         super();
     }
 

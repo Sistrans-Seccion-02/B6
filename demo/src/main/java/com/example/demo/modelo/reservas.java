@@ -8,8 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import org.springframework.data.annotation.Id;
 
-@Document(collection = "reservas")
-public class Reserva {
+@Document(collection = "hotel")
+public class reservas {
     //_id
     @Id
     private ObjectId id;
@@ -19,13 +19,13 @@ public class Reserva {
     private Integer diasreserva;
     private Boolean checkin;
     private Boolean checkout;
-    private List<Habitacion> habitaciones;
-    private List<Cliente> clientes;
-    private List<Consumo> consumos;
+    private List<habitaciones> habitaciones;
+    private List<clientes> clientes;
+    private List<consumos> consumos;
 
 
 
-    public Reserva(Date inicio, Date fin, List<Habitacion> habitacion, List<Cliente> cliente, List<Consumo> consumos) {
+    public reservas(Date inicio, Date fin, List<habitaciones> habitacion, List<clientes> cliente, List<consumos> consumos) {
         super();
         this.inicio = inicio;
         this.fin = fin;
@@ -34,7 +34,7 @@ public class Reserva {
         this.consumos = consumos;
     }
 
-    public Reserva() {
+    public reservas() {
         super();
     }
 
@@ -86,27 +86,27 @@ public class Reserva {
         this.checkout = checkout;
     }
 
-    public List<Habitacion> getHabitaciones() {
+    public List<habitaciones> getHabitaciones() {
         return habitaciones;
     }
 
-    public void setHabitaciones(List<Habitacion> habitaciones) {
+    public void setHabitaciones(List<habitaciones> habitaciones) {
         this.habitaciones = habitaciones;
     }
 
-    public List<Cliente> getClientes() {
+    public List<clientes> getClientes() {
         return clientes;
     }
 
-    public void setClientes(List<Cliente> clientes) {
+    public void setClientes(List<clientes> clientes) {
         this.clientes = clientes;
     }
 
-    public List<Consumo> getConsumos() {
+    public List<consumos> getConsumos() {
         return consumos;
     }
 
-    public void setConsumos(List<Consumo> consumos) {
+    public void setConsumos(List<consumos> consumos) {
         this.consumos = consumos;
     }
 

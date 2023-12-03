@@ -2,20 +2,20 @@ package com.example.demo.modelo;
 
 import java.util.List;
 
-public class TipoHabitacion {
+public class tipohabi {
 
     private String nombre;
     private int costo;
     private int capacidad;
 
-    public TipoHabitacion(String nombre, int costo, int capacidad) {
+    public tipohabi(String nombre, int costo, int capacidad) {
         super();
         this.nombre = nombre;
         this.costo = costo;
         this.capacidad = capacidad;
     }
 
-    public TipoHabitacion() {
+    public tipohabi() {
         super();
     }
 

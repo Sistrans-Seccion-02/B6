@@ -6,14 +6,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.example.demo.repositorio.ReservaRepository;
+import com.example.demo.repositorio.reservaRepository;
 
 
 @Controller
 public class ReservaController {
 
     @Autowired
-    private ReservaRepository reservasRepository;
+    private reservaRepository reservasRepository;
 
     @GetMapping("/reservas")
     public String obtenerTodasLasReservas(Model model) {
