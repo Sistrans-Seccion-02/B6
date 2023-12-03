@@ -7,23 +7,20 @@ import org.springframework.data.annotation.Id;
 
 public class habitaciones {
 
-	@Id
-	private ObjectId id;
-    private int numero;
+	private int numero;
 	private List<String> dotacion;
-    private tipohabi tipo;
-    
+	private tipohabi tipohabi;
 
-    public habitaciones(int numero, List<String> dotacion, tipohabi tipo) {
-        super();
-        this.numero = numero;
+	public habitaciones(int numero, List<String> dotacion, tipohabi tipohabi) {
+		super();
+		this.numero = numero;
 		this.dotacion = dotacion;
-        this.tipo = tipo;
-    }
+		this.tipohabi = tipohabi;
+	}
 
-    public habitaciones() {
-        super();
-    }
+	public habitaciones() {
+		super();
+	}
 
 	public int getNumero() {
 		return numero;
@@ -41,14 +38,12 @@ public class habitaciones {
 		this.dotacion = dotacion;
 	}
 
-	public tipohabi getTipo() {
-		return tipo;
+	public tipohabi gettipohabi() {
+		return tipohabi;
 	}
 
-	public void setTipo(tipohabi tipo) {
-		this.tipo = tipo;
+	public void settipohabi(tipohabi tipohabi) {
+		this.tipohabi = tipohabi;
 	}
 
-	
-	
 }

@@ -26,4 +26,12 @@ public class ReservaController {
         model.addAttribute("tiposhabitaciones", reservasRepository.getTipohabis());
         return "tiposhabitaciones";
     }
+
+    @GetMapping("/habitaciones")
+    public String obtenerTodasLasHabis(Model model) {
+        model.addAttribute("habitaciones", reservasRepository.getHabis());
+        return "habitaciones";
+    }
+
+
 }
