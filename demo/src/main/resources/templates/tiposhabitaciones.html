@@ -18,21 +18,17 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Precio</th>
-                <th>Dotación</th>
+                <th>Costo</th>
+                <th>Capacidad</th>
+                
             </tr>
         </thead>
         <tbody>
-            <tr th:each="tipo : ${tiposhabitaciones}">
-                <td th:text="${tipo.nombre}"></td>
-                <td th:text="${tipo.precio}"></td>
-                <td>
-                    <ul th:if="${tipo.dotacion != null}">
-                        <li th:each="dotacionItem : ${tipo.dotacion}">
-                            <span th:text="${dotacionItem}"></span>
-                        </li>
-                    </ul>
-                </td>
+            <tr th:each="tipohabi : ${tiposhabitaciones}">
+                <td th:text="${tipohabi.nombre}"></td>
+                <td th:text="${tipohabi.costo}"></td>
+                <td th:text="${tipohabi.capacidad}"></td>
+                
             </tr>
         </tbody>
     </table>

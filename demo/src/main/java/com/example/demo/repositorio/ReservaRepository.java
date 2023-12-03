@@ -18,5 +18,9 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     @Query("{}")
     List<reservas> findAllReservas();
 
+
+    @Aggregation(pipeline = {"{ $group: {_id: \"$habitaciones.tipohabi.nombre\", habitaciones: { $first: \"$habitaciones.tipohabi\" }}},{$replaceWith: { tipohabi: \"$habitaciones\" }}"})
+    List<tipohabi> getTipohabis();
+    
     
 }
