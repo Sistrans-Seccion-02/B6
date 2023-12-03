@@ -20,6 +20,8 @@
                 <th>Id Reserva</th>
                 <th>Fecha de Inicio</th>
                 <th>Fecha de Finalización</th>
+                <th>Check In</th>
+                <th>Check Out</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +29,8 @@
                 <td th:text="${reserva.id}"></td>
                 <td th:text="${reserva.inicio}"></td>
                 <td th:text="${reserva.fin}"></td>
+                <td th:text="${reserva.checkin}"></td>
+                <td th:text="${reserva.checkout}"></td>
             </tr>
         </tbody>
     </table>
