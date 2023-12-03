@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumos</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.3/css/bootstrap.min.css" />
+</head>
+<body>
+
+    <!-- Incluye el navbar -->
+    <div th:replace="navbar :: navbar"></div>
+
+<div class="container mt-3">
+    <h1>Consumos</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Consumos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cliente : ${clientes}">
+                <td th:text="${cliente.id}"></td>
+                <td th:text="${cliente.nombre}"></td>
+                <td>
+                    <ul th:if="${cliente.consumos != null}">
+                        <li th:each="consumo : ${cliente.consumos}">
+                            <span><strong th:text="${'Fecha del Consumo: '}"></strong></span>
+                            <span th:text="${consumo.fecha}"></span><br/>
+                            <span><strong th:text="${'Servicio Consumido: '}"></strong></span>
+                            <span th:text="${consumo.nombre}"></span><br/>
+                            <span><strong th:text="${'Costo del Consumo: '}"></strong></span>
+                            <span th:text="${consumo.precio}"></span><br/>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="/webjars/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+</body>
+</html>
