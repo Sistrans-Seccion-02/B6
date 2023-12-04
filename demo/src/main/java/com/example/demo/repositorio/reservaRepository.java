@@ -9,6 +9,7 @@ import com.example.demo.modelo.RFC1;
 import com.example.demo.modelo.habitaciones;
 import com.example.demo.modelo.mostarHabis;
 import com.example.demo.modelo.mostrarConsumos;
+import com.example.demo.modelo.mostrarServ;
 import com.example.demo.modelo.mostrarTipoHabi;
 import com.example.demo.modelo.reservas;
 import com.example.demo.modelo.servicio;
@@ -37,8 +38,13 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
 
 
 
-    @Query(value = "{}", fields = "{ 'servicio.nombre': 1, 'servicio.descripcion': 1, 'servicio.costo': 1 }")
-    List<servicio> obtenerInformacionServicios();
+    @Aggregation(pipeline = {
+        "{$unwind: \"$consumos\"}",
+        "{$unwind: \"$consumos.servicio\"}",
+        "{$group: { _id: \"$consumos.servicio.nombre\", descripcion: { $first: \"$consumos.servicio.descripcion\" }, costo: { $first: \"$consumos.servicio.costo\" }, totalConsumos: { $sum: 1 } }}"
+    })
+    List<mostrarServ> obtenerInformacionServicios();
+    
     
     //RF1
     //BUSQUEDA

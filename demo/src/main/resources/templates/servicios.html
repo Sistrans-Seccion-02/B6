@@ -20,13 +20,15 @@
                 <th>Servicio</th>
                 <th>Descripcion</th>
                 <th>Costo</th>
+                <th>Consumos</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="servicio : ${servicios}">
-                <td th:text="${servicio.nombre}"></td>
+                <td th:text="${servicio._id}"></td>
                 <td th:text="${servicio.descripcion}"></td>
                 <td th:text="${servicio.costo}"></td>
+                <td th:text="${servicio.totalConsumos}"></td>
             </tr>
         </tbody>
     </table>
