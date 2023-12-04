@@ -1,0 +1,5801 @@
+db.hotel.insertMany([
+
+  {
+    "inicio": new Date("2023-12-22"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 105,
+        "dotacion": ["TV", "Aire acondicionado", "Cafetera"],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 100,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 5,
+        "tipoid": "CC",
+        "nombre": "Juan Santos",
+        "email": "juan.santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 300
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 100
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 200
+        }
+      }
+    ]
+  },
+
+  {
+    "inicio": new Date("2023-12-2"),
+    "fin": new Date("2023-12-8"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 103,
+        "dotacion": ["TV", "Aire acondicionado", "minibar"],
+        "tipohabi": {
+          "nombre": "Familiar",
+          "costo": 400,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 3,
+        "tipoid": "CC",
+        "nombre": "Juan Romero",
+        "email": "juan.romero@example.com"
+      },
+      {
+        "_id": 4,
+        "tipoid": "CC",
+        "nombre": "Maria Lopez",
+        "email": "maria.lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-3"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 500
+        }
+      },
+      {
+        "fecha": new Date("2023-12-2"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 200
+        }
+      },
+      {
+        "fecha": new Date("2023-12-4"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 100
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-22"),
+    "diasreserva": 7,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 159,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1449,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 941,
+        "tipoid": "CC",
+        "nombre": "Alejandra Lopez",
+        "email": "laura_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 186
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 50
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 290
+        }
+      },
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 184
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-11"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 135,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1862,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 312,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Angulo",
+        "email": "sara_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 247
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-08"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 163,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 600,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 242,
+        "tipoid": "Pasaporte",
+        "nombre": "Alejandra Santos",
+        "email": "andres_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-25"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Cocteles",
+          "costo": 234
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 85
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Almuerzo",
+          "costo": 222
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 2,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 151,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1371,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 36,
+        "tipoid": "Pasaporte",
+        "nombre": "Laura Rodriguez",
+        "email": "pedro_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 21
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 142,
+        "dotacion": [
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1567,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 857,
+        "tipoid": "CC",
+        "nombre": "Andres Ramirez",
+        "email": "daniel_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 93
+        }
+      },
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 262
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 272
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 264
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-06"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 173,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1233,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 457,
+        "tipoid": "Pasaporte",
+        "nombre": "Juan Gomez",
+        "email": "ana_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 31
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 74
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-11"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 192,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 658,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 259,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Santos",
+        "email": "alejandra_angulo@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 137
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-09"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 125,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1438,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 278,
+        "tipoid": "Pasaporte",
+        "nombre": "Juan Mora",
+        "email": "sara_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 224
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 163
+        }
+      },
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Cocteles",
+          "costo": 173
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 282
+        }
+      },
+      {
+        "fecha": new Date("2023-12-01"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 217
+        }
+      }
+    ]
+  }, 
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-30"),
+    "diasreserva": 1,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 175,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 731,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 485,
+        "tipoid": "CC",
+        "nombre": "Juan Mora",
+        "email": "sara_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 189
+        }
+      },
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 288
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-04"),
+    "diasreserva": 9,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 175,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 557,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 98,
+        "tipoid": "CC",
+        "nombre": "Ana Mora",
+        "email": "alejandra_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 117
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 299
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 10,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 195,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 840,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 188,
+        "tipoid": "Pasaporte",
+        "nombre": "Sara Rodriguez",
+        "email": "juan_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-01"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 236
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 207
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-16"),
+    "diasreserva": 1,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 190,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1606,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 774,
+        "tipoid": "CC",
+        "nombre": "Sara Ramirez",
+        "email": "juan_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 21
+        }
+      },
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 82
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-16"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 152,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1498,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 563,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Santos",
+        "email": "alejandra_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 109
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 1,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 189,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1776,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 950,
+        "tipoid": "Pasaporte",
+        "nombre": "Laura Ramirez",
+        "email": "alejandra_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 175
+        }
+      },
+      {
+        "fecha": new Date("2023-12-15"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 240
+        }
+      },
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 106
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 116
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-14"),
+    "diasreserva": 9,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 185,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1257,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 911,
+        "tipoid": "CC",
+        "nombre": "Daniel Gomez",
+        "email": "maria_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 24
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-15"),
+    "diasreserva": 9,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 193,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 897,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 438,
+        "tipoid": "CC",
+        "nombre": "Maria Perez",
+        "email": "samuel_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 257
+        }
+      },
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 75
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-29"),
+    "diasreserva": 1,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 163,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1278,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 749,
+        "tipoid": "Pasaporte",
+        "nombre": "Juan Perez",
+        "email": "ana_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 153
+        }
+      },
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 61
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 111
+        }
+      },
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 131
+        }
+      },
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 219
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-09"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 107,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 29,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 76,
+        "tipoid": "Pasaporte",
+        "nombre": "Sara Ramirez",
+        "email": "samuel_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 284
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 116
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-26"),
+    "diasreserva": 2,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 191,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1879,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 721,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Angulo",
+        "email": "maria_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 88
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 178
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 205
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-02"),
+    "diasreserva": 5,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 179,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 642,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 983,
+        "tipoid": "CC",
+        "nombre": "Laura Mora",
+        "email": "laura_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 59
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-24"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 126,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 431,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 958,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Ramirez",
+        "email": "laura_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 91
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-03"),
+    "diasreserva": 4,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 157,
+        "dotacion": [
+          "Cafetera",
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 379,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 185,
+        "tipoid": "CC",
+        "nombre": "Daniel Gomez",
+        "email": "ana_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 94
+        }
+      },
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 73
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-09"),
+    "diasreserva": 1,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 151,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 85,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 858,
+        "tipoid": "Pasaporte",
+        "nombre": "Maria Ramirez",
+        "email": "alejandra_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 209
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 109
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 242
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 178
+        }
+      },
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 238
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-17"),
+    "diasreserva": 2,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 125,
+        "dotacion": [
+          "TV",
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1613,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 44,
+        "tipoid": "Pasaporte",
+        "nombre": "Sara Santos",
+        "email": "pedro_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 227
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-07"),
+    "diasreserva": 10,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 114,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 111,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 503,
+        "tipoid": "Pasaporte",
+        "nombre": "Sara Gomez",
+        "email": "alejandra_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 33
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 253
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 120
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-17"),
+    "diasreserva": 6,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 141,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 966,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 279,
+        "tipoid": "CC",
+        "nombre": "Laura Lopez",
+        "email": "daniel_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 274
+        }
+      },
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 128
+        }
+      },
+      {
+        "fecha": new Date("2023-12-08"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 173
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 246
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 146
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-30"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 194,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1753,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 497,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Gomez",
+        "email": "andres_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-05"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 280
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 46
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-14"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 130,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1421,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 798,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Ramirez",
+        "email": "maria_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 279
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 21
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 151
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-18"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 188,
+        "dotacion": [
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 274,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 299,
+        "tipoid": "CC",
+        "nombre": "Andres Gomez",
+        "email": "laura_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 200
+        }
+      },
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 67
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 41
+        }
+      },
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 272
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 249
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-18"),
+    "diasreserva": 9,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 183,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1982,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 269,
+        "tipoid": "CC",
+        "nombre": "Pedro Angulo",
+        "email": "daniel_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 212
+        }
+      },
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 233
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 82
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-29"),
+    "diasreserva": 4,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 162,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 984,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 538,
+        "tipoid": "Pasaporte",
+        "nombre": "Daniel Ramirez",
+        "email": "samuel_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 228
+        }
+      },
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 118
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 198
+        }
+      },
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 113
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-10"),
+    "diasreserva": 2,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 113,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 314,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 274,
+        "tipoid": "CC",
+        "nombre": "Samuel Gomez",
+        "email": "laura_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 61
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 165
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Almuerzo",
+          "costo": 169
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-19"),
+    "diasreserva": 1,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 201,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1957,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 787,
+        "tipoid": "Pasaporte",
+        "nombre": "Laura Santos",
+        "email": "maria_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-15"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 100
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 274
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 201
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 45
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-05"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 199,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 488,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 452,
+        "tipoid": "CC",
+        "nombre": "Pedro Ramirez",
+        "email": "juan_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 234
+        }
+      },
+      {
+        "fecha": new Date("2023-12-15"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 137
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-26"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 132,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 578,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 385,
+        "tipoid": "Pasaporte",
+        "nombre": "Daniel Lopez",
+        "email": "daniel_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 187
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 192
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 151
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 245
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 245
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-21"),
+    "diasreserva": 9,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 109,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 634,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 505,
+        "tipoid": "CC",
+        "nombre": "Juan Lopez",
+        "email": "andres_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-25"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 86
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 144
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 244
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 49
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 150
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-31"),
+    "diasreserva": 2,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 143,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 449,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 557,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Santos",
+        "email": "andres_angulo@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 272
+        }
+      },
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 267
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 85
+        }
+      },
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 258
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-18"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 121,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 330,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 800,
+        "tipoid": "Pasaporte",
+        "nombre": "Maria Ramirez",
+        "email": "daniel_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 23
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 135
+        }
+      },
+      {
+        "fecha": new Date("2023-12-27"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 40
+        }
+      },
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 232
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 251
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-21"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 203,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1787,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 720,
+        "tipoid": "CC",
+        "nombre": "Juan Lopez",
+        "email": "andres_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 257
+        }
+      },
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 261
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 249
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-29"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 174,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 871,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 639,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Gomez",
+        "email": "juan_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 142
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 136
+        }
+      },
+      {
+        "fecha": new Date("2023-12-08"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 88
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-25"),
+    "diasreserva": 7,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 123,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1845,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 526,
+        "tipoid": "CC",
+        "nombre": "Laura Mora",
+        "email": "pedro_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-08"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 274
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 173
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-08"),
+    "diasreserva": 3,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 191,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1343,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 845,
+        "tipoid": "CC",
+        "nombre": "Samuel Lopez",
+        "email": "pedro_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 119
+        }
+      },
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Almuerzo",
+          "costo": 218
+        }
+      },
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 230
+        }
+      },
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 258
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-08"),
+    "diasreserva": 7,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 110,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 983,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 395,
+        "tipoid": "CC",
+        "nombre": "Juan Gomez",
+        "email": "samuel_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 290
+        }
+      },
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 190
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 190
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 178,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1149,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 925,
+        "tipoid": "CC",
+        "nombre": "Daniel Gomez",
+        "email": "andres_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 64
+        }
+      },
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 171
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 106
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 243
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-08"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 117,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 902,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 485,
+        "tipoid": "CC",
+        "nombre": "Samuel Perez",
+        "email": "pedro_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 223
+        }
+      }
+    ]
+  },{
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-19"),
+    "diasreserva": 10,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 171,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1930,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 248,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Lopez",
+        "email": "sara_angulo@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Almuerzo",
+          "costo": 124
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 120
+        }
+      },
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 216
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-14"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 149,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1898,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 979,
+        "tipoid": "CC",
+        "nombre": "Sara Gomez",
+        "email": "daniel_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 66
+        }
+      },
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 238
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 25
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-03"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 139,
+        "dotacion": [
+          "TV",
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 695,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 129,
+        "tipoid": "CC",
+        "nombre": "Sara Rodriguez",
+        "email": "alejandra_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-01"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 117
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-17"),
+    "diasreserva": 3,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 206,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 855,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 586,
+        "tipoid": "CC",
+        "nombre": "Sara Santos",
+        "email": "andres_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 176
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 53
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 168
+        }
+      },
+      {
+        "fecha": new Date("2023-12-01"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 208
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-26"),
+    "diasreserva": 1,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 185,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1806,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 263,
+        "tipoid": "CC",
+        "nombre": "Ana Lopez",
+        "email": "laura_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 23
+        }
+      },
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 249
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 144
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 64
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-31"),
+    "diasreserva": 2,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 181,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1498,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 665,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Mora",
+        "email": "daniel_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-06"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 295
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-18"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 192,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1060,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 165,
+        "tipoid": "Pasaporte",
+        "nombre": "Laura Mora",
+        "email": "juan_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 175
+        }
+      }
+    ]
+  },{
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-08"),
+    "diasreserva": 1,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 182,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 89,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 126,
+        "tipoid": "Pasaporte",
+        "nombre": "Laura Angulo",
+        "email": "sara_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 286
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 128
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 201
+        }
+      },
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 69
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 109,
+        "dotacion": [
+          "Cafetera",
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 606,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 469,
+        "tipoid": "CC",
+        "nombre": "Samuel Santos",
+        "email": "andres_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 156
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 143
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 51
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 89
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 293
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-25"),
+    "diasreserva": 3,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 147,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 820,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 944,
+        "tipoid": "CC",
+        "nombre": "Sara Perez",
+        "email": "juan_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 202
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 150
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-27"),
+    "diasreserva": 1,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 130,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1426,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 678,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Lopez",
+        "email": "sara_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 183
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 285
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-20"),
+    "diasreserva": 3,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 142,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1104,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 532,
+        "tipoid": "CC",
+        "nombre": "Daniel Ramirez",
+        "email": "ana_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 101
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 20
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 125
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 250
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 295
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-02"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 121,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1036,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 63,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Rodriguez",
+        "email": "ana_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Cocteles",
+          "costo": 207
+        }
+      },
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 178
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 271
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-01"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 198,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 980,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 647,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Lopez",
+        "email": "andres_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 231
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 105
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 225
+        }
+      },
+      {
+        "fecha": new Date("2023-12-01"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 63
+        }
+      },
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 45
+        }
+      }
+    ]
+  },{
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-22"),
+    "diasreserva": 2,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 112,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1060,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 853,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Lopez",
+        "email": "daniel_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 233
+        }
+      },
+      {
+        "fecha": new Date("2023-12-29"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 44
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 6,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 146,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1565,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 143,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Perez",
+        "email": "maria_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-15"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 239
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 178
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 90
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 56
+        }
+      },
+      {
+        "fecha": new Date("2023-12-27"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 211
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-01"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 138,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 7,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 689,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Ramirez",
+        "email": "ana_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 35
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 290
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 54
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 242
+        }
+      },
+      {
+        "fecha": new Date("2023-12-15"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 33
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-06"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 205,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1472,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 954,
+        "tipoid": "Pasaporte",
+        "nombre": "Juan Gomez",
+        "email": "andres_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 75
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 77
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 155
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-05"),
+    "diasreserva": 7,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 195,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 336,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 270,
+        "tipoid": "CC",
+        "nombre": "Maria Angulo",
+        "email": "andres_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 28
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-06"),
+    "diasreserva": 3,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 192,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1480,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 295,
+        "tipoid": "CC",
+        "nombre": "Sara Angulo",
+        "email": "ana_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 176
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 128
+        }
+      },
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Almuerzo",
+          "costo": 158
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 180
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-20"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 196,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1939,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 270,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Rodriguez",
+        "email": "daniel_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 150
+        }
+      },
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Masaje",
+          "costo": 23
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 244
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 197
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-25"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 185,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1456,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 987,
+        "tipoid": "CC",
+        "nombre": "Andres Rodriguez",
+        "email": "andres_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 53
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 282
+        }
+      },
+      {
+        "fecha": new Date("2023-12-27"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 117
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 268
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-01"),
+    "diasreserva": 9,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 171,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 129,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 256,
+        "tipoid": "Pasaporte",
+        "nombre": "Laura Angulo",
+        "email": "laura_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 239
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 129
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-25"),
+    "diasreserva": 3,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 138,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 601,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 257,
+        "tipoid": "CC",
+        "nombre": "Sara Gomez",
+        "email": "samuel_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-15"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 63
+        }
+      },
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 219
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 127
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 69
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-24"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 195,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1143,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 827,
+        "tipoid": "CC",
+        "nombre": "Sara Rodriguez",
+        "email": "sara_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 180
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 62
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 106
+        }
+      },
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 179
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-16"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 106,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 322,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 88,
+        "tipoid": "Pasaporte",
+        "nombre": "Sara Mora",
+        "email": "ana_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 120
+        }
+      },
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 243
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 44
+        }
+      },
+      {
+        "fecha": new Date("2023-12-05"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 116
+        }
+      },
+      {
+        "fecha": new Date("2023-12-20"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 211
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-06"),
+    "diasreserva": 10,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 183,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1854,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 702,
+        "tipoid": "CC",
+        "nombre": "Sara Mora",
+        "email": "sara_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-08"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 26
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 131
+        }
+      },
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 128
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-10"),
+    "diasreserva": 2,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 115,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 544,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 559,
+        "tipoid": "CC",
+        "nombre": "Daniel Santos",
+        "email": "maria_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-08"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 171
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 295
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-24"),
+    "diasreserva": 10,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 134,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1643,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 53,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Rodriguez",
+        "email": "juan_angulo@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-27"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 195
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 247
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-24"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 120,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 287,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 399,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Santos",
+        "email": "sara_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 184
+        }
+      },
+      {
+        "fecha": new Date("2023-12-03"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 120
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-03"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 117,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1117,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 947,
+        "tipoid": "CC",
+        "nombre": "Laura Santos",
+        "email": "pedro_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 201
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 273
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-18"),
+    "diasreserva": 10,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 167,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 856,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 597,
+        "tipoid": "CC",
+        "nombre": "Maria Ramirez",
+        "email": "samuel_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 209
+        }
+      },
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 153
+        }
+      },
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Cocteles",
+          "costo": 49
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-29"),
+    "diasreserva": 8,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 151,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1080,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 19,
+        "tipoid": "Pasaporte",
+        "nombre": "Samuel Mora",
+        "email": "alejandra_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-04"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 247
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 199,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 878,
+          "capacidad": 3
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 807,
+        "tipoid": "CC",
+        "nombre": "Alejandra Santos",
+        "email": "laura_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 64
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 148
+        }
+      },
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 145
+        }
+      },
+      {
+        "fecha": new Date("2023-12-05"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 136
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 231
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-15"),
+    "diasreserva": 1,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 108,
+        "dotacion": [
+          "TV",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 1514,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 39,
+        "tipoid": "Pasaporte",
+        "nombre": "Sara Angulo",
+        "email": "laura_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 178
+        }
+      },
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 71
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 168
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 79
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-06"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 177,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 645,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 301,
+        "tipoid": "CC",
+        "nombre": "Ana Mora",
+        "email": "pedro_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 172
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 130
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 191
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 212
+        }
+      },
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 72
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-25"),
+    "diasreserva": 1,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 181,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 467,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 689,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Lopez",
+        "email": "alejandra_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 22
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-14"),
+    "diasreserva": 5,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 107,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1314,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 157,
+        "tipoid": "CC",
+        "nombre": "Andres Rodriguez",
+        "email": "sara_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-25"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 172
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 54
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-30"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 199,
+        "dotacion": [
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 240,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 609,
+        "tipoid": "Pasaporte",
+        "nombre": "Alejandra Ramirez",
+        "email": "juan_rodriguez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 204
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-17"),
+    "diasreserva": 2,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 136,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1605,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 57,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Lopez",
+        "email": "pedro_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 296
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 254
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-29"),
+    "diasreserva": 7,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 112,
+        "dotacion": [
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 768,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 834,
+        "tipoid": "CC",
+        "nombre": "Samuel Perez",
+        "email": "sara_angulo@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-25"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 103
+        }
+      },
+      {
+        "fecha": new Date("2023-12-12"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 89
+        }
+      },
+      {
+        "fecha": new Date("2023-12-05"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 237
+        }
+      },
+      {
+        "fecha": new Date("2023-12-27"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 212
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-16"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 198,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 195,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 893,
+        "tipoid": "Pasaporte",
+        "nombre": "Maria Perez",
+        "email": "sara_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 260
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-20"),
+    "diasreserva": 8,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 112,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 557,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 841,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Gomez",
+        "email": "pedro_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 270
+        }
+      },
+      {
+        "fecha": new Date("2023-12-08"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 149
+        }
+      },
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 172
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 31
+        }
+      },
+      {
+        "fecha": new Date("2023-12-11"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 70
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-10"),
+    "diasreserva": 1,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 153,
+        "dotacion": [
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 357,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 415,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Lopez",
+        "email": "ana_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-14"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 141
+        }
+      },
+      {
+        "fecha": new Date("2023-12-09"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 37
+        }
+      },
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Almuerzo",
+          "costo": 60
+        }
+      },
+      {
+        "fecha": new Date("2023-12-19"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Cocteles",
+          "costo": 256
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-20"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 148,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 500,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 523,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Mora",
+        "email": "sara_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-16"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 78
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Gimnasio",
+          "descripcion": "Gimnasio",
+          "costo": 26
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-21"),
+    "diasreserva": 6,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 117,
+        "dotacion": [
+          "Aire acondicionado",
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 419,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 587,
+        "tipoid": "Pasaporte",
+        "nombre": "Ana Santos",
+        "email": "andres_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-17"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Reunion",
+          "costo": 292
+        }
+      },
+      {
+        "fecha": new Date("2023-12-07"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 200
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-17"),
+    "diasreserva": 4,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 153,
+        "dotacion": [
+          "Cafetera",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 23,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 873,
+        "tipoid": "CC",
+        "nombre": "Andres Rodriguez",
+        "email": "samuel_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 206
+        }
+      },
+      {
+        "fecha": new Date("2023-12-22"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 172
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 158
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-02"),
+    "diasreserva": 4,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 188,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 227,
+          "capacidad": 2
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 337,
+        "tipoid": "Pasaporte",
+        "nombre": "Andres Rodriguez",
+        "email": "juan_santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 60
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 81
+        }
+      },
+      {
+        "fecha": new Date("2023-12-01"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 290
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-03"),
+    "diasreserva": 3,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 203,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1608,
+          "capacidad": 4
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 433,
+        "tipoid": "Pasaporte",
+        "nombre": "Alejandra Rodriguez",
+        "email": "alejandra_ramirez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 241
+        }
+      },
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Piscina",
+          "descripcion": "Piscina",
+          "costo": 69
+        }
+      },
+      {
+        "fecha": new Date("2023-12-10"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 45
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-26"),
+    "diasreserva": 10,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 151,
+        "dotacion": [
+          "Cafetera",
+          "Aire acondicionado",
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 821,
+          "capacidad": 6
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 8,
+        "tipoid": "CC",
+        "nombre": "Pedro Angulo",
+        "email": "daniel_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 265
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 192
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 72
+        }
+      },
+      {
+        "fecha": new Date("2023-12-13"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Tiendas",
+          "descripcion": "Ropa",
+          "costo": 291
+        }
+      },
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Salones",
+          "descripcion": "Conferencia",
+          "costo": 72
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-26"),
+    "diasreserva": 5,
+    "checkin": false,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 200,
+        "dotacion": [
+          "Cafetera",
+          "TV",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 130,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 320,
+        "tipoid": "CC",
+        "nombre": "Andres Perez",
+        "email": "andres_mora@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-18"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Prestamo de Utensilios",
+          "descripcion": "BBQ",
+          "costo": 241
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-15"),
+    "diasreserva": 2,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 106,
+        "dotacion": [
+          "TV",
+          "Cafetera",
+          "Aire acondicionado"
+        ],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 1194,
+          "capacidad": 5
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 298,
+        "tipoid": "CC",
+        "nombre": "Maria Gomez",
+        "email": "daniel_gomez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-21"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 299
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-31"),
+    "diasreserva": 6,
+    "checkin": false,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 168,
+        "dotacion": [
+          "Cafetera"
+        ],
+        "tipohabi": {
+          "nombre": "Doble",
+          "costo": 597,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 752,
+        "tipoid": "CC",
+        "nombre": "Pedro Gomez",
+        "email": "sara_lopez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-02"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 99
+        }
+      }
+    ]
+  },
+  {
+    "inicio": new Date("2023-12-01"),
+    "fin": new Date("2023-12-15"),
+    "diasreserva": 5,
+    "checkin": true,
+    "checkout": true,
+    "habitaciones": [
+      {
+        "numero": 185,
+        "dotacion": [
+          "TV"
+        ],
+        "tipohabi": {
+          "nombre": "Suite",
+          "costo": 1669,
+          "capacidad": 1
+        }
+      }
+    ],
+    "clientes": [
+      {
+        "_id": 641,
+        "tipoid": "Pasaporte",
+        "nombre": "Pedro Gomez",
+        "email": "alejandra_perez@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 207
+        }
+      },
+      {
+        "fecha": new Date("2023-12-26"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Supermercado",
+          "descripcion": "Supermercado",
+          "costo": 100
+        }
+      },
+      {
+        "fecha": new Date("2023-12-30"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 61
+        }
+      },
+      {
+        "fecha": new Date("2023-12-31"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Lavado",
+          "descripcion": "Ropa",
+          "costo": 89
+        }
+      }
+    ]
+  }
+])
