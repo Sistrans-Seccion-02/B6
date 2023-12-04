@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import com.example.demo.repositorio.reservaRepository;
 
 
@@ -32,6 +30,13 @@ public class ReservaController {
         model.addAttribute("habitaciones", reservasRepository.getHabis());
         return "habitaciones";
     }
+
+    @GetMapping("/servicios")
+    public String obtenerTodosLosServicios(Model model) {
+        model.addAttribute("servicios", reservasRepository.obtenerInformacionServicios());
+        return "servicios";
+    }
+
 
 
 }
