@@ -27,53 +27,62 @@ En el archivo del proyecto ubicado en src/main/resources/application.yml, donde 
 
 Cuando se crea una base de datos en Atlas MongoDB por lo general se pide una coleccion base para comenzar, por ello, a continuacion adjuntamos las colecciones usadas en este proyecto para usar alguna de estas como coleccion base (puede seleccionar cualquiera). La base de datos MongoDB usada para este proyecto, tiene estas colecciones creadas:
 
-- bebidas:
-```json
+hotel
 {
-  "_id": {
-    "$oid": "6555905537bd8a4de1a8ca08"
-  },
-  "nombre": "Blue Label",
-  "gradoAlcohol": 12,
-  "_class": "com.example.demo.modelo.Bebida"
-}
-```
-
-- bebidas_tipos:
-```json
-{
-  "_id": {
-    "$oid": "6553edd71af8a72f0d64d54c"
-  },
-  "nombre": "Cerveza",
-  "Bebidas": [
-    {
-      "nombre": "Poker",
-      "gradoAlcohol": 0.2
-    }
-  ],
-  "_class": "com.example.demo.modelo.BebidaTipos"
-}
-```
-
-- tipo_bebidas:
-```json
-{
-  "_id": {
-    "$oid": "655590ebc466e02e51a4f2e0"
-  },
-  "nombre": "Wisky",
-  "bebidas": [
-    {
-      "$ref": "bebidas",
-      "$id": {
-        "$oid": "655590eac466e02e51a4f2df"
+    "inicio": new Date("2023-12-22"),
+    "fin": new Date("2023-12-28"),
+    "diasreserva": 6,
+    "checkin": true,
+    "checkout": false,
+    "habitaciones": [
+      {
+        "numero": 105,
+        "dotacion": ["TV", "Aire acondicionado", "Cafetera"],
+        "tipohabi": {
+          "nombre": "Sencilla",
+          "costo": 100,
+          "capacidad": 1
+        }
       }
-    }
-  ],
-  "_class": "com.example.demo.modelo.TipoBebida"
-}
-```
+    ],
+    "clientes": [
+      {
+        "_id": 5,
+        "tipoid": "CC",
+        "nombre": "Juan Santos",
+        "email": "juan.santos@example.com"
+      }
+    ],
+    "consumos": [
+      {
+        "fecha": new Date("2023-12-28"),
+        "pagado": true,
+        "servicio": {
+          "nombre": "Restaurante",
+          "descripcion": "Almuerzo",
+          "costo": 300
+        }
+      },
+      {
+        "fecha": new Date("2023-12-23"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Spa",
+          "descripcion": "Masaje",
+          "costo": 100
+        }
+      },
+      {
+        "fecha": new Date("2023-12-24"),
+        "pagado": false,
+        "servicio": {
+          "nombre": "Bar",
+          "descripcion": "Cocteles",
+          "costo": 200
+        }
+      }
+    ]
+  }
 
 
 ## Tecnologias usadas
@@ -81,8 +90,6 @@ Cuando se crea una base de datos en Atlas MongoDB por lo general se pide una col
 Este proyecto fue desarrollado haciendo uso de Spring, particularmente Spring Boot para el backend, con entorno de ejecucion node.js y thymeleaf para la conexion de un frontend local con los endpoints definidos. Se recomienda hacer lectura de la documentacion de dichas tecnologias.
 
 ## Colaboración
-Proyecto desarrollado por los monitores del curso Sistemas Transaccionales, especificamente, de las secciones 2 y 3. (2023-02)
-- Version inicial (inicializacion de Spring, entidades iniciales y creacion de la base de datos MongoDB en Atlas): [Nathalia Quiroga, Laura Martinez]
-- MVP Demo v0.1 (Front-end, Back-end, CRUD, implementacion patron MVC, modelos, controladores, templates, conexion, documentacion): [Juan Coronel @JuanCoronel70] 
-- Revisión: ...
+Proyecto desarrollado por Laura Murcia, Sara Benavides y Daniel Garcia
+
 
