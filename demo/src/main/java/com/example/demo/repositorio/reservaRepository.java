@@ -27,6 +27,43 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     @Query(value = "{}", fields = "{ 'servicio.nombre': 1, 'servicio.descripcion': 1, 'servicio.costo': 1 }")
     List<servicio> obtenerInformacionServicios();
     
+    //RF1
+    //BUSQUEDA
+
+    public class rf1 {
+        String nombre;
+        int habitaciones;
+
+        public rf1(String nombre, int habitaciones) {
+            this.nombre = nombre;
+            this.habitaciones = habitaciones;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public int getHabitaciones() {
+            return habitaciones;
+        }
+
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+
+        public void setHabitaciones(int habitaciones) {
+            this.habitaciones = habitaciones;
+        }
+    }
+
+    @Aggregation(pipeline = {"{$group:{_id: \"$habitaciones.tipohabi.nombre\", habitaciones: {$sum: 1}}}"})
+    List<rf1> obtenerCantidadTiposhabis();
+    
+    //UPDATE
+    
+    //INSERT*
+        
+    //DELETE*
     
     
 }
