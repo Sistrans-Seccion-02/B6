@@ -4,8 +4,10 @@ public class RFC2 {
     private int habitacionNumero;
     private Float indiceDeOcupacion;
     public RFC2() {
+        super();
     }
     public RFC2(int habitacionNumero, Float indiceDeOcupacion) {
+        super();
         this.habitacionNumero = habitacionNumero;
         this.indiceDeOcupacion = indiceDeOcupacion;
     }

@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.repository.Query;
 
 import com.example.demo.modelo.RFC1;
 import com.example.demo.modelo.RFC2;
+import com.example.demo.modelo.RFC3;
 import com.example.demo.modelo.habitaciones;
 import com.example.demo.modelo.mostarHabis;
 import com.example.demo.modelo.mostrarConsumos;
@@ -16,6 +17,7 @@ import com.example.demo.modelo.reservas;
 import com.example.demo.modelo.servicio;
 import com.example.demo.modelo.tipohabi;
 
+import java.sql.Date;
 import java.util.List;
 
 public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
@@ -104,6 +106,16 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     })
     List<RFC2> obtenerRFC2();
     
+
+    //RFC3
+    @Aggregation(pipeline = {
+        "{$unwind: \"$consumos\"}",
+        "{$match: {\"clientes.nombre\": ?0}}",
+        "{$match: {\"consumos.fecha\": {$gte: new Date(?1), $lt: new Date(?2)}}}",
+        "{$project: { _id: 0, cliente: \"$clientes.nombre\", fechaConsumo: \"$consumos.fecha\", servicio: \"$consumos.servicio.nombre\", descripcionServicio: \"$consumos.servicio.descripcion\", costoServicio: \"$consumos.servicio.costo\", pagado: \"$consumos.pagado\" }}"
+    })
+    List<RFC3> obtenerRFC3(String nombre, String fechaI, String fechaF);
+
     
     
 }
