@@ -17,13 +17,14 @@
     <table class="table">
         <thead>
             <tr>
-                
+                <th>Habitación</th>
                 <th>Dinero Recolectado</th>
                 
             </tr>
         </thead>
         <tbody>
             <tr th:each="rf : ${RFC1}">
+                <td th:text="${rf._id}"></td>
                 <td th:text="${rf.totalDineroRecolectado}"></td>
             </tr>
         </tbody>

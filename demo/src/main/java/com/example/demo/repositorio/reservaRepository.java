@@ -83,6 +83,10 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     List<mostrarConsumos> obtenerConsumos();
     
     //RFC1
-    @Aggregation(pipeline = {"{ $unwind: \"$consumos\" }, { $group: { _id: \"$habitaciones.numero\", totalDineroRecolectado: { $sum: \"$consumos.servicio.costo\" } } }"})
+    @Aggregation(pipeline = {
+        "{$unwind: \"$consumos\"}",
+        "{$group: {_id: \"$habitaciones.numero\", totalDineroRecolectado: { $sum: \"$consumos.servicio.costo\" }}}",
+    })
     List<RFC1> obtenerRFC1();
+    
 }

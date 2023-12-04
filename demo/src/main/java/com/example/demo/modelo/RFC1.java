@@ -9,11 +9,11 @@ public class RFC1 {
     
 
     public RFC1() {
-        
+        super();
     }
 
     public RFC1(Integer totalDineroRecolectado, List<Integer> _id) {
-        
+        super();
         this.totalDineroRecolectado = totalDineroRecolectado;
         this._id = _id;
     }
