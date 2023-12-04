@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumos</title>
+    <title>RFC1</title>
     <link rel="stylesheet" href="/webjars/bootstrap/4.5.3/css/bootstrap.min.css" />
 </head>
 <body>
@@ -12,38 +12,29 @@
     <div th:replace="navbar :: navbar"></div>
 
 <div class="container mt-3">
-    <h1>Consumos</h1>
+    <h1>RFC1</h1>
 
     <table class="table">
         <thead>
             <tr>
-                
-                <th>Fecha</th>
-                <th>Servicio</th>
-                <th>Cliente</th>
+                <th>Id Habitacion</th>
+                <th>Dinero Recolectado</th>
                 
             </tr>
         </thead>
-       
         <tbody>
-            
-            <tr th:each="consumo : ${consumos}">
-                <td th:text="${consumo.consumos.fecha}"></td>
-                <td th:text="${consumo.consumos.servicio.nombre}"></td>
-
+            <tr th:each="rf : ${RFC1}">
+                
                 <td>
-                    <ul th:if="${consumo.clientes != null}">
-                        <li th:each="cliente : ${consumo.clientes}">
-                            <span><strong th:text="${'Nombre: '}"></strong></span>
-                            <span th:text="${cliente.nombre}"></span><br/>
-                            
+                    <ul th:if="${rf.numeroHabitacion != null}">
+                        <li th:each="numero : ${rf.numeroHabitacion}">
+                            <span th:text="${numero}"></span>
                         </li>
                     </ul>
                 </td>
-                
+                <td th:text="${rf.totalDineroRecolectado}"></td>
             </tr>
         </tbody>
-    
     </table>
 
 </div>

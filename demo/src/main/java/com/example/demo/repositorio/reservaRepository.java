@@ -5,7 +5,9 @@ import org.springframework.data.mongodb.repository.Aggregation;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
+import com.example.demo.modelo.RFC1;
 import com.example.demo.modelo.habitaciones;
+import com.example.demo.modelo.mostrarConsumos;
 import com.example.demo.modelo.reservas;
 import com.example.demo.modelo.servicio;
 import com.example.demo.modelo.tipohabi;
@@ -64,6 +66,27 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     //INSERT*
         
     //DELETE*
+
+    //consumos
+     @Aggregation(pipeline = {"{ $unwind: {path: \"$consumos\" }}"})
+    List<mostrarConsumos> obtenerConsumos();
     
-    
+    //RFC1
+    @Aggregation(pipeline = {"{\r\n" + //
+            "    $unwind: \"$consumos\"\r\n" + //
+            "  },\r\n" + //
+            "  {\r\n" + //
+            "    $group: {\r\n" + //
+            "      _id: \"$habitaciones.numero\",\r\n" + //
+            "      totalDineroRecolectado: { $sum: \"$consumos.servicio.costo\" }\r\n" + //
+            "    }\r\n" + //
+            "  },\r\n" + //
+            "  {\r\n" + //
+            "    $project: {\r\n" + //
+            "      _id: 0, \r\n" + //
+            "      numeroHabitacion: \"$_id\",\r\n" + //
+            "      totalDineroRecolectado: 1\r\n" + //
+            "    }\r\n" + //
+            "  }"})
+    List<RFC1> obtenerRFC1();
 }

@@ -37,6 +37,17 @@ public class ReservaController {
         return "servicios";
     }
 
+    @GetMapping("/consumos")
+    public String obtenerTodosLosConsumos(Model model) {
+        model.addAttribute("consumos", reservasRepository.obtenerConsumos());
+        return "consumos";
+    }
+
+    @GetMapping("/RFC1")
+    public String obtenerRFC1(Model model) {
+        model.addAttribute("RFC1", reservasRepository.obtenerRFC1());
+        return "RFC1";
+    }
 
 
 }
