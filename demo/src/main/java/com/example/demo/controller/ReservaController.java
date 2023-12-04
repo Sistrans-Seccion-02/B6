@@ -49,5 +49,11 @@ public class ReservaController {
         return "RFC1";
     }
 
+    @GetMapping("/RFC2")
+    public String obtenerRFC2(Model model) {
+        model.addAttribute("RFC2", reservasRepository.obtenerRFC2());
+        return "RFC2";
+    }
+
 
 }
