@@ -17,21 +17,13 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id Habitacion</th>
+                
                 <th>Dinero Recolectado</th>
                 
             </tr>
         </thead>
         <tbody>
             <tr th:each="rf : ${RFC1}">
-                
-                <td>
-                    <ul th:if="${rf.numeroHabitacion != null}">
-                        <li th:each="numero : ${rf.numeroHabitacion}">
-                            <span th:text="${numero}"></span>
-                        </li>
-                    </ul>
-                </td>
                 <td th:text="${rf.totalDineroRecolectado}"></td>
             </tr>
         </tbody>

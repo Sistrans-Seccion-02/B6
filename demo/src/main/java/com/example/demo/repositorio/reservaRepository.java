@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.repository.Query;
 import com.example.demo.modelo.RFC1;
 import com.example.demo.modelo.habitaciones;
 import com.example.demo.modelo.mostrarConsumos;
+import com.example.demo.modelo.mostrarTipoHabi;
 import com.example.demo.modelo.reservas;
 import com.example.demo.modelo.servicio;
 import com.example.demo.modelo.tipohabi;
@@ -20,8 +21,12 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     List<reservas> findAllReservas();
 
 
-    @Aggregation(pipeline = {"{ $group: {_id: \"$habitaciones.tipohabi.nombre\", tipohabi: { $first: \"$habitaciones.tipohabi\" }}},{$replaceWith: { tipohabi : { $arrayElemAt: [\"$tipohabi\", 0] }}}"})
-    List<tipohabi> getTipohabis();
+   @Aggregation(pipeline = {
+        "{ $group: {_id: \"$habitaciones.tipohabi.nombre\", tipohabi: { $first: \"$habitaciones.tipohabi\" }}}",
+        "{ $replaceWith: { tipohabi : { $arrayElemAt: [\"$tipohabi\", 0] }}}",
+    })
+    List<mostrarTipoHabi> getTipohabis();
+
 
     @Aggregation(pipeline = {"{$group: {_id: \"$habitaciones.numero\", habitaciones: {$first: \"$habitaciones\" } }}, {$replaceWith: { habitaciones : {$arrayElemAt: [\"$habitaciones\", 0] } }}"})
     List<habitaciones> getHabis();
@@ -72,21 +77,6 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     List<mostrarConsumos> obtenerConsumos();
     
     //RFC1
-    @Aggregation(pipeline = {"{\r\n" + //
-            "    $unwind: \"$consumos\"\r\n" + //
-            "  },\r\n" + //
-            "  {\r\n" + //
-            "    $group: {\r\n" + //
-            "      _id: \"$habitaciones.numero\",\r\n" + //
-            "      totalDineroRecolectado: { $sum: \"$consumos.servicio.costo\" }\r\n" + //
-            "    }\r\n" + //
-            "  },\r\n" + //
-            "  {\r\n" + //
-            "    $project: {\r\n" + //
-            "      _id: 0, \r\n" + //
-            "      numeroHabitacion: \"$_id\",\r\n" + //
-            "      totalDineroRecolectado: 1\r\n" + //
-            "    }\r\n" + //
-            "  }"})
+    @Aggregation(pipeline = {"{ $unwind: \"$consumos\" }, { $group: { _id: \"$habitaciones.numero\", totalDineroRecolectado: { $sum: \"$consumos.servicio.costo\" } } }"})
     List<RFC1> obtenerRFC1();
 }

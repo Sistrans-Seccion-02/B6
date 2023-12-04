@@ -4,17 +4,18 @@ import java.util.List;
 
 
 public class RFC1 {
+    private List<Integer> _id;
     private Integer totalDineroRecolectado;
-    private List<Integer> numeroHabitacion;
+    
 
     public RFC1() {
-        super();
+        
     }
 
-    public RFC1(Integer totalDineroRecolectado, List<Integer> numeroHabitacion) {
-        super();
+    public RFC1(Integer totalDineroRecolectado, List<Integer> _id) {
+        
         this.totalDineroRecolectado = totalDineroRecolectado;
-        this.numeroHabitacion = numeroHabitacion;
+        this._id = _id;
     }
 
     public Integer getTotalDineroRecolectado() {
@@ -25,21 +26,15 @@ public class RFC1 {
         this.totalDineroRecolectado = totalDineroRecolectado;
     }
 
-    public List<Integer> getNumeroHabitacion() {
-        return numeroHabitacion;
+    public List<Integer> get_id() {
+        return _id;
     }
 
-    public void setNumeroHabitacion(List<Integer> numeroHabitacion) {
-        this.numeroHabitacion = numeroHabitacion;
+    public void set_id(List<Integer> _id) {
+        this._id = _id;
     }
    
-    @Override
-    public String toString() {
-        return "ResultadoConsulta{" +
-                "totalDineroRecolectado=" + totalDineroRecolectado +
-                ", numeroHabitacion=" + numeroHabitacion +
-                '}';
-    }
+    
     
    
 

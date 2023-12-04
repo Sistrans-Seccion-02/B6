@@ -25,9 +25,9 @@
         </thead>
         <tbody>
             <tr th:each="tipohabi : ${tiposhabitaciones}">
-                <td th:text="${tipohabi.nombre}"></td>
-                <td th:text="${tipohabi.costo}"></td>
-                <td th:text="${tipohabi.capacidad}"></td>
+                <td th:text="${tipohabi.tipohabi.nombre}"></td>
+                <td th:text="${tipohabi.tipohabi.costo}"></td>
+                <td th:text="${tipohabi.tipohabi.capacidad}"></td>
                 
             </tr>
         </tbody>
