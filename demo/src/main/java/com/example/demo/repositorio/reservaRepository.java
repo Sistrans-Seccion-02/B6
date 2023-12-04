@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.repository.Query;
 
 import com.example.demo.modelo.RFC1;
 import com.example.demo.modelo.habitaciones;
+import com.example.demo.modelo.mostarHabis;
 import com.example.demo.modelo.mostrarConsumos;
 import com.example.demo.modelo.mostrarTipoHabi;
 import com.example.demo.modelo.reservas;
@@ -28,8 +29,13 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     List<mostrarTipoHabi> getTipohabis();
 
 
-    @Aggregation(pipeline = {"{$group: {_id: \"$habitaciones.numero\", habitaciones: {$first: \"$habitaciones\" } }}, {$replaceWith: { habitaciones : {$arrayElemAt: [\"$habitaciones\", 0] } }}"})
-    List<habitaciones> getHabis();
+    @Aggregation(pipeline = {
+        "{$group: {_id: \"$habitaciones.numero\", habitaciones: { $first: \"$habitaciones\" }}}",
+        "{$replaceWith: { habitaciones: { $arrayElemAt: [\"$habitaciones\", 0] } }}"
+    })
+    List<mostarHabis> getHabis();
+
+
 
     @Query(value = "{}", fields = "{ 'servicio.nombre': 1, 'servicio.descripcion': 1, 'servicio.costo': 1 }")
     List<servicio> obtenerInformacionServicios();

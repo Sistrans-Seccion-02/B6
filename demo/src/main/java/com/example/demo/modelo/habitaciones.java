@@ -40,6 +40,14 @@ public class habitaciones {
 		return tipohabi;
 	}
 
+	public tipohabi getTipohabi() {
+		return tipohabi;
+	}
+
+	public void setTipohabi(tipohabi tipohabi) {
+		this.tipohabi = tipohabi;
+	}
+
 	public void settipohabi(tipohabi tipohabi) {
 		this.tipohabi = tipohabi;
 	}

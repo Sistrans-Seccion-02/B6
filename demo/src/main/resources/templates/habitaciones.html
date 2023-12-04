@@ -18,21 +18,25 @@
         <thead>
             <tr>
                 <th>Número</th>
+                <th>Tipo</th>
                 <th>Dotacion</th>
                 
             </tr>
         </thead>
         <tbody>
             <tr th:each="habitaciones : ${habitaciones}">
-                <td th:text="${habitaciones.numero}"></td>
+                <td th:text="${habitaciones.habitaciones.numero}"></td>
+                <td th:text="${habitaciones.habitaciones.tipohabi.nombre}"></td>
                 
                 <td>
-                    <ul th:if="${habitaciones.dotacion != null}">
-                        <li th:each="dotacionItem : ${habitaciones.dotacion}">
+                    <ul th:if="${habitaciones.habitaciones.dotacion != null}">
+                        <li th:each="dotacionItem : ${habitaciones.habitaciones.dotacion}">
                             <span th:text="${dotacionItem}"></span>
                         </li>
                     </ul>
                 </td>
+
+                
                 
             </tr>
         </tbody>
