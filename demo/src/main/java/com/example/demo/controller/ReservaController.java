@@ -1,5 +1,10 @@
 package com.example.demo.controller;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -61,9 +66,37 @@ public class ReservaController {
     public String obtenerRFC3(Model model,@RequestParam(name = "id", required = false, defaultValue = "Juan Perez") String id,
                                             @RequestParam(name = "fechaI", required = false, defaultValue = "2023-12-10") String fechaI,
                                             @RequestParam(name = "fechaF", required = false, defaultValue = "2023-12-18") String fechaF) {
-        model.addAttribute("RFC3", reservasRepository.obtenerRFC3(null, null, null));
+        SimpleDateFormat original = new SimpleDateFormat("yyyy-MM-dd");
+
+        if ((id == null || id.equals("")) || (fechaI ==null || fechaI.equals(""))  || (fechaF ==null || fechaF.equals("")) ){
+            model.addAttribute("RFC3", reservasRepository.obtenerConsumos());
+        }else{
+
+        try {
+            Date fechaDateI = original.parse(fechaI);
+            Date fechaDateF = original.parse(fechaF);
+            model.addAttribute("RFC3", reservasRepository.obtenerRFC3(id, fechaDateI, fechaDateF));
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        
+    }
         return "RFC3";
     }
 
+    /*
+    @GetMapping("/RFC4")
+    public String obtenerRFC4(Model model,@RequestParam(name = "servicio", required = false, defaultValue = "Restaurante") String servicio,
+                                            @RequestParam(name = "fechaI", required = false, defaultValue = "2023-12-10") String fechaI,
+                                            @RequestParam(name = "fechaF", required = false, defaultValue = "2023-12-18") String fechaF) {
+        model.addAttribute("RFC4", reservasRepository.obtenerRFC4(servicio, fechaI, fechaF));
+        return "RFC4";
+    } */
 
+    @GetMapping("/RFC4")
+    public String obtenerRFC4(Model model) {
+        model.addAttribute("RFC4", reservasRepository.obtenerRFC4());
+        return "RFC4";
+    }
 }

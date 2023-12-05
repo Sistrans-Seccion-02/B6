@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RFC1</title>
+    <title>RFC2</title>
     <link rel="stylesheet" href="/webjars/bootstrap/4.5.3/css/bootstrap.min.css" />
 </head>
 <body>
@@ -24,6 +24,7 @@
         </thead>
         <tbody>
             <tr th:each="rf2 : ${RFC2}">
+                <td th:text="${rf2}"></td>
                 <td th:text="${rf2.habitacionNumero}"></td>
                 <td th:text="${rf2.indiceDeOcupacion}"></td>
             </tr>

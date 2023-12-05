@@ -17,7 +17,7 @@ import com.example.demo.modelo.reservas;
 import com.example.demo.modelo.servicio;
 import com.example.demo.modelo.tipohabi;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
@@ -100,8 +100,9 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
 
     //RFC2
     @Aggregation(pipeline = {
-        "{$match: {inicio: { $gte: new Date(\"2022-12-01\"), $lt: new Date(\"2023-12-31\") }}} {$unwind: \"$habitaciones\"}",
-        "{$group: {_id: \"$habitaciones.numero\", totalDiasOcupados: { $sum: { $divide: [ { $subtract: [\"$fin\", \"$inicio\"] }, 24 * 60 * 60 * 1000 ] } } }}",
+        "{$match: {inicio: { $gte: \"2022-12-31T00:00:00Z\", $lt: \"2023-12-31T00:00:00Z\" }}}",
+        "{$unwind: \"$habitaciones\"}",
+        "{$group: {_id: \"$habitaciones.numero\", totalDiasOcupados: { $sum: { $divide: [ { $subtract: [\"$fin\", \"$inicio\"] }, {$multiply : [24 , 60 , 60 , 1000]} ] } } }}",
         "{$project: {habitacionNumero: \"$_id\", indiceDeOcupacion: { $round: [ { $multiply: [ { $divide: [\"$totalDiasOcupados\", 365] }, 100 ] }, 2 ] }, _id: 0}}",
     })
     List<RFC2> obtenerRFC2();
@@ -111,11 +112,23 @@ public interface reservaRepository extends MongoRepository<reservas, ObjectId> {
     @Aggregation(pipeline = {
         "{$unwind: \"$consumos\"}",
         "{$match: {\"clientes.nombre\": ?0}}",
-        "{$match: {\"consumos.fecha\": {$gte: new Date(?1), $lt: new Date(?2)}}}",
-        "{$project: { _id: 0, cliente: \"$clientes.nombre\", fechaConsumo: \"$consumos.fecha\", servicio: \"$consumos.servicio.nombre\", descripcionServicio: \"$consumos.servicio.descripcion\", costoServicio: \"$consumos.servicio.costo\", pagado: \"$consumos.pagado\" }}"
+        "{$match: {\"consumos.fecha\": {$gte: ?1, $lt: ?2 }}}",
+        "{$project: { _id: 0, cliente: \"$clientes.nombre\", fechaConsumo: \"$consumos.fecha\", servicio: \"$consumos.servicio.nombre\", descripcionServicio: \"$consumos.servicio.descripcion\", costoServicio: \"$consumos.servicio.costo\", pagado: \"$consumos.pagado\" }}",
     })
-    List<RFC3> obtenerRFC3(String nombre, String fechaI, String fechaF);
+    List<RFC3> obtenerRFC3(String nombre, Date fechaI, Date fechaF);
 
+    //RFC4
+    
+    @Aggregation(pipeline = {
+        "{$unwind: \"$consumos\"}",
+        "{ $match: { \"consumos.fecha\": { $gte: \"2023-01-01T00:00:00Z\", $lt: \"2023-12-31T00:00:00Z\" }}}",
+        "{ $match : {\"consumos.servicio.nombre\": \"Restaurante\" } }",
+    })
+    List<mostrarConsumos> obtenerRFC4();
+    //List<mostrarConsumos> obtenerRFC4(String servicio, String fechaI, String fechaF);
+    
+
+    
     
     
 }
